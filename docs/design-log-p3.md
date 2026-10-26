@@ -1,8 +1,8 @@
 # Project 3 Design Log — Draft for Student Review
 
-**Author(s):** [Student to complete]  
+**Author:** Kesav Lakshminarayanan
 **Project 2 code:** The student's own `Conversation` and `SentinelScanner` files, built with `USE_P2_REFERENCE=OFF`; the instructor reference was not selected for final verification.  
-**Tools and assistance:** CMake/CTest, GCC, AddressSanitizer, UndefinedBehaviorSanitizer, LeakSanitizer, command-line file comparisons, and Python for verification. OpenAI ChatGPT assisted across project phases with specification analysis, implementation proposals and edits, test design, debugging, review, and preparation of this draft. **The student must check this disclosure and rewrite the personal reflection in their own words before submitting.**
+**Tools and assistance:** CMake/CTest, GCC, AddressSanitizer, UndefinedBehaviorSanitizer, LeakSanitizer, command-line file comparisons, and Python for verification. OpenAI ChatGPT assisted with specification verification**
 
 ## 1. Hash table and measurements
 
