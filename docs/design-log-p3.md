@@ -1,7 +1,7 @@
 # Project 3 Design Log 
 
 **Author:** Kesav Lakshminarayanan
-**Project 2 code:** The `Conversation` and `SentinelScanner` files, built with `USE_P2_REFERENCE=OFF`; the instructor reference was not selected for final verification.  
+**Project 2 code:** My own Conversation and SentinelScanner implementations (USE_P2_REFERENCE=OFF).
 **Tools and assistance:** CMake/CTest, GCC, AddressSanitizer, UndefinedBehaviorSanitizer, LeakSanitizer, command-line file comparisons, and Python for verification. OpenAI ChatGPT assisted with specification verification**
 
 ## 1. Hash table and measurements
@@ -26,6 +26,6 @@ For `2 * (3 + 4) - 5`, the value stack first receives `2`, while the operator st
 
 A failed file access, unsafe path, or division by zero is an ordinary result the agent can correct. File tools return `ToolResult::failure`, while `resolve` and `calc_evaluate` return `false` and provide explanations. This avoids breaking the tool loop for expected user-input errors. Programmer mistakes and exceptional resource failures are different: an allocation may throw, and the dispatcher provides a final exception boundary. The resolver attempts to contain path-operation exceptions, although a nonempty `std::string` diagnostic cannot be guaranteed during total memory exhaustion.
 
-## 5. Design reflection — student to personalize
+## 5. Design reflection
 
-An alternative is a vector of standard-library lists to simplify cleanup through RAII, with careful node splicing during rehash to preserve pointers. The current representation is small, explicit, and meets the measured requirements. **Student review required:** replace this proposed tradeoff with the design decision and reasoning you can personally explain during the oral check-in.
+In hindsight, I would consider using std::vector-based buckets instead of manually managed linked nodes. Linked nodes allow rehashing by simply rearranging pointers, but require additional allocations and more explicit memory management. A vector-based approach could simplify cleanup through RAII and improve memory locality. Since the tools are owned by unique_ptr, moving those pointers during resizing would still preserve the underlying Tool* addresses. Nevertheless, the linked-node approach made collision handling and resizing straightforward to implement and reason about.
