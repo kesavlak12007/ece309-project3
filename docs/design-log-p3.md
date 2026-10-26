@@ -1,7 +1,7 @@
-# Project 3 Design Log — Draft for Student Review
+# Project 3 Design Log 
 
 **Author:** Kesav Lakshminarayanan
-**Project 2 code:** The student's own `Conversation` and `SentinelScanner` files, built with `USE_P2_REFERENCE=OFF`; the instructor reference was not selected for final verification.  
+**Project 2 code:** The `Conversation` and `SentinelScanner` files, built with `USE_P2_REFERENCE=OFF`; the instructor reference was not selected for final verification.  
 **Tools and assistance:** CMake/CTest, GCC, AddressSanitizer, UndefinedBehaviorSanitizer, LeakSanitizer, command-line file comparisons, and Python for verification. OpenAI ChatGPT assisted with specification verification**
 
 ## 1. Hash table and measurements
