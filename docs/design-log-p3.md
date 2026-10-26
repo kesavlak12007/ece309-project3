@@ -3,7 +3,7 @@
 **Author:** Kesav Lakshminarayanan
 
 **Project 2 code:** My own Conversation and SentinelScanner implementations (USE_P2_REFERENCE=OFF).
-**Tools and assistance:** CMake/CTest, GCC, AddressSanitizer, UndefinedBehaviorSanitizer, LeakSanitizer, command-line file comparisons, and Python for verification. OpenAI ChatGPT assisted with specification verification**
+**Tools and assistance:** CMake/CTest, GCC, AddressSanitizer, UndefinedBehaviorSanitizer, LeakSanitizer, command-line file comparisons, and Python for verification. OpenAI ChatGPT assisted with specification verification
 
 ## 1. Hash table and measurements
 
